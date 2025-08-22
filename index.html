@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLUR Movimento: Plano de Ação - Fase 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Variáveis de Cores e Fontes da Live Consultoria */
+        :root {
+            --azul-petroleo: #06192a;
+            --verde-vibrante: #00e800;
+            --cinza-claro: #f4f4f4;
+            --branco: #ffffff;
+            --font-primaria: 'Poppins', sans-serif;
+            --font-secundaria: 'Merriweather', serif;
+        }
+
+        /* Estilos Globais do Body com Textura PLUR */
+        body {
+            font-family: var(--font-primaria);
+            background-color: var(--azul-petroleo);
+            color: var(--cinza-claro);
+            background-image:
+                radial-gradient(circle at 50% 0, rgba(255, 255, 255, 0.05), transparent 50%),
+                url('https://raw.githubusercontent.com/Clebito2/Plur/main/PLUR%20Movimento-06.png');
+            background-repeat: no-repeat, repeat;
+            background-size: auto, 150px auto;
+            background-attachment: fixed, fixed;
+            background-position: center, center;
+        }
+
+        /* Overlay semitransparente para suavizar a textura */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(6, 25, 42, 0.9);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Estilos para Títulos */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-primaria);
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Estilos para Textos Comuns */
+        p, li, span, td, th, div {
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+
+        .text-brand-green { color: var(--verde-vibrante); text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9); }
+        .bg-brand-dark { background-color: rgba(6, 25, 42, 0.9); }
+        .font-brand-secondary { font-family: var(--font-secundaria); }
+
+        /* Gradiente para Seção Hero */
+        .hero-gradient {
+            background: linear-gradient(rgba(6, 25, 42, 0.85), rgba(6, 25, 42, 0.95)), url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2940&auto=format&fit=crop') no-repeat center center;
+            background-size: cover;
+        }
+
+        /* Padrão de Fundo para Seções */
+        .section-bg-pattern {
+            background-color: rgba(17, 24, 39, 0.9);
+            background-image: radial-gradient(rgba(200, 200, 200, 0.05) 1px, transparent 1px);
+            background-size: 15px 15px;
+        }
+
+        /* Melhor contraste para caixas de conteúdo */
+        .content-box {
+            background-color: rgba(17, 24, 39, 0.95) !important;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in { animation: fadeIn 0.8s ease-out forwards; }
+
+        header, footer {
+            background-color: rgba(6, 25, 42, 0.95) !important;
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        footer { border-bottom: none; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+        
+        .metric-card {
+            background: rgba(0, 232, 0, 0.05);
+            border: 1px solid rgba(0, 232, 0, 0.2);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--verde-vibrante);
+        }
+        .metric-label {
+            font-size: 1rem;
+            color: var(--cinza-claro);
+        }
+    </style>
+</head>
+<body class="bg-brand-dark">
+    <!-- CABEÇALHO -->
+    <header class="py-6 px-4 sm:px-8 md:px-16 fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img src="https://raw.githubusercontent.com/Clebito2/layout/main/Logo live oficial-36.png" alt="Logo Live Liderança & Vendas" class="h-12">
+                <img src="https://raw.githubusercontent.com/Clebito2/Plur/main/PLUR%20Movimento-03.png" alt="Logo PLUR Movimento" class="h-12 bg-transparent">
+            </div>
+            <p class="hidden md:block text-right text-gray-300">Projeto PLUR: Plano de Ação - Fase 2</p>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <!-- SEÇÃO HERO -->
+        <section class="hero-gradient py-24 md:py-32 text-center text-white">
+            <div class="container mx-auto px-4 fade-in">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+                    Plano de Ação: <br class="hidden md:block"> Acelerando o Crescimento da <span class="text-brand-green">PLUR</span>
+                </h1>
+                <p class="mt-4 text-lg md:text-xl text-gray-300">Diretrizes estratégicas para estruturação da máquina de vendas e alcance das metas emergenciais.</p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO METAS EMERGENCIAIS -->
+        <section class="py-16 md:py-24 bg-brand-dark">
+            <div class="container mx-auto px-4 md:px-16 fade-in">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">1. Metas Emergenciais e Funil de Vendas (Próximos 6 Meses)</h2>
+                    <p class="mt-2 text-gray-400">O caminho numérico para o incremento de R$ 50.000 no faturamento mensal.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                    <div class="metric-card">
+                        <div class="metric-value">3.000</div>
+                        <div class="metric-label">Leads Gerados (Topo de Funil)</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">180</div>
+                        <div class="metric-label">Visitas Qualificadas / Mês</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">45</div>
+                        <div class="metric-label">Matrículas / Mês</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">R$ 50k</div>
+                        <div class="metric-label">Incremento Faturamento / Mês</div>
+                    </div>
+                </div>
+                 <p class="text-center mt-8 text-gray-400 italic">Premissa: Taxa de conversão de visita para matrícula de 20-25%.</p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO PLANO DE AÇÃO -->
+        <section class="py-16 md:py-24 section-bg-pattern">
+            <div class="container mx-auto px-4 md:px-16 fade-in">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">2. Plano de Ação por Área</h2>
+                    <p class="mt-2 text-gray-400">Tarefas e responsabilidades para cada frente de atuação.</p>
+                </div>
+                <div class="space-y-12">
+                    <!-- Vendas & RH -->
+                    <div class="content-box p-8">
+                        <h3 class="text-3xl font-bold text-brand-green mb-6">Vendas & RH</h3>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">Ações Imediatas</h4>
+                                <ul class="list-disc list-inside space-y-2">
+                                    <li>Abertura urgente de 1 vaga para Vendedor(a).</li>
+                                    <li>Theo e Alane assumirão as vendas até a contratação.</li>
+                                    <li>Visão de Longo Prazo: Estruturar time de 4-5 vendedores para faturamento de +R$350k/mês.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">Perfil do Vendedor Ideal</h4>
+                                <ul class="list-disc list-inside space-y-2">
+                                    <li><b>Posição:</b> Vendedor(a) com perfil "agressivo", não "atendente".</li>
+                                    <li><b>Comportamental:</b> Influente e Dominante, com alta motivação financeira.</li>
+                                    <li><b>Técnico:</b> Educador Físico, Fisioterapeuta ou profissional com vasta experiência na dinâmica de academias.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comercial & Produtos -->
+                    <div class="content-box p-8">
+                        <h3 class="text-3xl font-bold text-brand-green mb-6">Comercial & Produtos</h3>
+                         <ul class="list-disc list-inside space-y-3">
+                            <li><b>Criar a Política Comercial da PLUR:</b> Desenvolver modelo de remuneração com progressão rápida de ganhos, plano de carreira com senioridade, status e benefícios (flexibilidade de horário, folgas).</li>
+                            <li><b>Estruturar o Portfólio de Produtos:</b> Detalhar e precificar todos os serviços (Fisioterapia, Recovery, Capoeira, etc.) para integrar à política comercial. <span class="text-yellow-400 italic">(Pendente: Áudio do Theo)</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Marketing -->
+                    <div class="content-box p-8">
+                        <h3 class="text-3xl font-bold text-brand-green mb-6">Marketing</h3>
+                        <ul class="list-disc list-inside space-y-3">
+                            <li><b>Meta Principal:</b> Garantir a geração de 180 visitas qualificadas por mês.</li>
+                            <li><b>Mapear Canais de Aquisição:</b> Levantar canais de menor Custo de Aquisição (CAC) e apresentar cenários de investimento.</li>
+                            <li><b>Ação Crítica (Sine Qua Non):</b> Coletar e distribuir depoimentos de alunos em todos os canais, focando nos diferenciais da PLUR (respeito, segurança, "CrossFit que não machuca").</li>
+                             <li><b>Brainstorm de Ações:</b> Detalhar e metrificiar novas ações de marketing. <span class="text-yellow-400 italic">(Pendente: Áudio do Theo)</span></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Tecnologia & Financeiro -->
+                     <div class="grid md:grid-cols-2 gap-8">
+                        <div class="content-box p-8">
+                            <h3 class="text-3xl font-bold text-brand-green mb-6">Tecnologia</h3>
+                            <ul class="list-disc list-inside space-y-3">
+                                <li><b>Implementar Assistente de IA com Dupla Função:</b>
+                                    <ul class="list-inside list-[circle] ml-6 mt-2">
+                                        <li><b>Comercial:</b> Qualificação de leads e agendamento de visitas.</li>
+                                        <li><b>Retenção:</b> Engajamento de alunos para redução de churn.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="content-box p-8">
+                            <h3 class="text-3xl font-bold text-brand-green mb-6">Financeiro</h3>
+                            <ul class="list-disc list-inside space-y-3">
+                                <li><b>Analisar Estrutura de Preços:</b> Validar se os valores atuais suportam os novos custos (comissões, marketing, reformas).</li>
+                                <li><b>Planejar Fluxo de Caixa:</b> Contabilizar custos extras e prever o déficit operacional decrescente dos próximos 5 meses.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SEÇÃO ANÁLISE DE LACUNAS -->
+        <section class="py-16 md:py-24 bg-brand-dark">
+            <div class="container mx-auto px-4 md:px-16 fade-in">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">3. Análise de Lacunas vs. Planejamento Anterior</h2>
+                    <p class="mt-2 text-gray-400">Novas atividades e aprofundamentos estratégicos identificados.</p>
+                </div>
+                <div class="max-w-3xl mx-auto content-box p-8 rounded-lg shadow-lg text-lg text-gray-300 leading-relaxed border-l-4 border-brand-green">
+                    <p class="mb-4">A análise do Luiz detalhou o "como", transformando a estratégia em um plano tático. As principais adições e aprofundamentos foram:</p>
+                    <ul class="list-disc list-inside space-y-3">
+                        <li><b>Métricas de Vendas Granulares:</b> Definição de metas numéricas claras para todo o funil de vendas (leads, visitas, matrículas).</li>
+                        <li><b>Perfil de Vaga Detalhado:</b> Especificação aprofundada do perfil comportamental e técnico para a contratação de Vendas.</li>
+                        <li><b>Criação da Política Comercial:</b> Uma tarefa inteiramente nova, focada em criar um sistema de remuneração e carreira para a equipe de vendas.</li>
+                        <li><b>Estruturação Formal do Portfólio:</b> Ação de documentar e precificar o mix de produtos existentes para fins comerciais.</li>
+                        <li><b>Análise de Viabilidade Financeira:</b> Nova camada de análise para validar o modelo de precificação frente aos novos custos.</li>
+                        <li><b>Ação Prioritária de Depoimentos:</b> A coleta de depoimentos foi elevada a uma tática de marketing crítica e inegociável.</li>
+                        <li><b>Previsão de Déficit no Fluxo de Caixa:</b> Um novo e crucial ponto de atenção financeira para garantir a sustentabilidade da operação durante a fase de crescimento.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO PRÓXIMOS PASSOS / CTA -->
+        <section class="hero-gradient py-24 text-center">
+            <div class="container mx-auto px-4 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold">Próximos Passos</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-300">Com o plano de ação definido, o foco agora é na execução. Vamos avançar com as contratações e a estruturação comercial para transformar estas metas em realidade.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="bg-black py-12">
+        <div class="container mx-auto px-8 text-center text-gray-500">
+            <img src="https://raw.githubusercontent.com/Clebito2/layout/main/Logo live oficial-34.png" alt="Logo Live" class="h-20 mx-auto mb-8">
+            <p>Live Liderança & Vendas</p>
+            <p class="text-sm">Alta performance começa com atitude.</p>
+            <p class="text-sm mt-2">Telefone: (62) 98400-2840 | E-mail: luizportal@ecossistemalive.com.br</p>
+        </div>
+    </footer>
+</body>
+</html>
